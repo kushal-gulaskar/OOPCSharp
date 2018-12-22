@@ -19,7 +19,7 @@ namespace OOP
             // Setting code, name and the age of the student
             s.Code = "001";
             s.Name = "Zara";
-            s.Age = 9;
+            s.Age = 9;//
             Console.WriteLine("*************C# Properties***************");
             Console.WriteLine("Student Info: {0}", s);
             //
