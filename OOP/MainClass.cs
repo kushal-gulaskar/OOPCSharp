@@ -1,6 +1,9 @@
 ﻿using OOP.AbstractClass;
+using OOP.ArrayOperation;
+using OOP.Constructor;
 using OOP.Interface;
 using OOP.OOPproperties;
+using OOP.StringRev;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +38,6 @@ namespace OOP
 
 
             Console.WriteLine("*************C# Abstract Class***************");
-
             AbstractBaseClass sh;
             sh = new Rectangle();
             sh.draw();
@@ -44,56 +46,22 @@ namespace OOP
             sh.Pprintline();
 
             Console.WriteLine("*************C# Interface***************");
-
             SubClass inter = new SubClass();
-
             inter.SetTutorial(1, "Interface example");
             Console.WriteLine(inter.GetTutorial());
 
             Console.WriteLine("*************C# Missing Element Array***************");
-
-            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 9 };
-            //array length
-            int n = arr.Length;
-
-            //sort reverse array
-            Array.Reverse(arr);
-
-            //sort array
-            Array.Sort(arr);
-
-            //Sort and print array
-            foreach (int i in arr)
-            {
-                Console.Write(i + "");
-            }
-
-            //Sum of the array
-            int sum = (n + 1) * (n + 2) / 2;
-
-            for (int i = 0; i < n; i++)
-            {
-                sum = sum - arr[i];
-            }
-            Console.WriteLine("");
-            Console.WriteLine("Missing element is---");
-            Console.WriteLine(sum);
-
+            ArrayOp ar = new ArrayOp();
+            ar.ArrayMissingEle();
+            ar.ArrayReverse();
+           
             Console.WriteLine("*************C# string word reverse Element Array***************");
+            StringOp str = new StringOp();
+            str.StringRev();
 
-            string str = "", reverse = "";
-            int length = 0;
-            Console.WriteLine("Enter a Word");
-            str = Console.ReadLine();
-            length = str.Length - 1;
-
-            while (length >= 0)
-            {
-                reverse = reverse + str[length];
-                length--;
-            }
-            Console.WriteLine("Reverse word is {0}", reverse);
-            Console.ReadLine();
+            Console.WriteLine("******************C# Constructor**********************************");
+            ConstructorDefault cn = new ConstructorDefault();
+            cn.Display();
         }
     }
 }

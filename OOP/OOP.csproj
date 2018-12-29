@@ -60,12 +60,15 @@
     <Compile Include="AbstractClass\AbstractBaseClass.cs" />
     <Compile Include="AbstractClass\Circle.cs" />
     <Compile Include="AbstractClass\Rectangle.cs" />
+    <Compile Include="ArrayOperation\ArrayOp.cs" />
+    <Compile Include="Constructor\ConstructorDefault.cs" />
     <Compile Include="Interface\Iinterface.cs" />
     <Compile Include="Interface\SubClass.cs" />
     <Compile Include="MainClass.cs" />
     <Compile Include="OOPproperties\KushalProperty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="OOPproperties\StudentProperties.cs" />
+    <Compile Include="StringRev\StringOp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
