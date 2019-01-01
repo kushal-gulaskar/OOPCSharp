@@ -61,7 +61,10 @@
     <Compile Include="AbstractClass\Circle.cs" />
     <Compile Include="AbstractClass\Rectangle.cs" />
     <Compile Include="ArrayOperation\ArrayOp.cs" />
+    <Compile Include="Constructor\ConstructorCopy.cs" />
     <Compile Include="Constructor\ConstructorDefault.cs" />
+    <Compile Include="Constructor\ConstructorStatic.cs" />
+    <Compile Include="Enum\EnumSample.cs" />
     <Compile Include="Interface\Iinterface.cs" />
     <Compile Include="Interface\SubClass.cs" />
     <Compile Include="MainClass.cs" />

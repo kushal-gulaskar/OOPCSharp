@@ -23,7 +23,6 @@ namespace OOP.StringRev
                 length--;
             }
             Console.WriteLine("Reverse word is {0}", reverse);
-            Console.ReadLine();
         }
       
     }

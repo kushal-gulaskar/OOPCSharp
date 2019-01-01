@@ -1,6 +1,7 @@
 ﻿using OOP.AbstractClass;
 using OOP.ArrayOperation;
 using OOP.Constructor;
+using OOP.Enum;
 using OOP.Interface;
 using OOP.OOPproperties;
 using OOP.StringRev;
@@ -59,9 +60,20 @@ namespace OOP
             StringOp str = new StringOp();
             str.StringRev();
 
-            Console.WriteLine("******************C# Constructor**********************************");
+            Console.WriteLine("******************C# Default Constructor**********************************");
             ConstructorDefault cn = new ConstructorDefault();
             cn.Display();
+
+            Console.WriteLine("******************C# Copy Constructor**********************************");
+            ConstructorCopy pc = new ConstructorCopy(10); pc.Display();
+            ConstructorCopy pc1 = new ConstructorCopy(pc); pc1.Display();
+
+            Console.WriteLine("******************C# Static Constructor**********************************");
+            ConstructorStatic sc = new ConstructorStatic(); sc.Display();
+
+            Console.WriteLine("******************C# Enum Under Namespace**********************************");
+            WeekDays d = WeekDays.Tuesday;
+            Console.WriteLine(d);
         }
     }
 }

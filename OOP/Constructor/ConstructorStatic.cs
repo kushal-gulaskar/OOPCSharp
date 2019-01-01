@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace OOP.Constructor
 {
-    class ConstructorDefault
+    class ConstructorStatic
     {
-        int c;
-        int a = 1;
-        int b = 3;
-        public ConstructorDefault()
+        static int c;
+        static int a = 1;
+        static int b = 3;
+        static ConstructorStatic()
         {
-            Console.WriteLine("Contructor initialized");
+            Console.WriteLine("Static Contructor initialized");
         }
 
         public void Display()
