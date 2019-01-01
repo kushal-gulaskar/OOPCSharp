@@ -61,6 +61,7 @@
     <Compile Include="AbstractClass\Circle.cs" />
     <Compile Include="AbstractClass\Rectangle.cs" />
     <Compile Include="ArrayOperation\ArrayOp.cs" />
+    <Compile Include="Collections\Class1.cs" />
     <Compile Include="Constructor\ConstructorCopy.cs" />
     <Compile Include="Constructor\ConstructorDefault.cs" />
     <Compile Include="Constructor\ConstructorStatic.cs" />
