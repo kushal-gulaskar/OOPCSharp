@@ -71,7 +71,7 @@ namespace OOP
             Console.WriteLine("******************C# Static Constructor**********************************");
             ConstructorStatic sc = new ConstructorStatic(); sc.Display();
 
-            Console.WriteLine("******************C# Enum Under Namespace**********************************");
+            Console.WriteLine("******************C# Enummmm Under Namespace**********************************");
             WeekDays d = WeekDays.Tuesday;
             Console.WriteLine(d);
         }
