@@ -14,7 +14,7 @@ namespace OOP.StringRev
         public void StringRev()
         {
             Console.WriteLine("Enter a Word");
-            str = Console.ReadLine();
+            str = "Selenium Java"; //Console.ReadLine();
             length = str.Length - 1;
 
             while (length >= 0)
