@@ -64,7 +64,7 @@ namespace OOP
             ConstructorDefault cn = new ConstructorDefault();
             cn.Display();
 
-            Console.WriteLine("******************C# Copy Constructor**********************************");
+            Console.WriteLine("*******************C# Copy Constructor**********************************");
             ConstructorCopy pc = new ConstructorCopy(10); pc.Display();
             ConstructorCopy pc1 = new ConstructorCopy(pc); pc1.Display();
 
