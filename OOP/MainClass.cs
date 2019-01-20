@@ -74,6 +74,8 @@ namespace OOP
             Console.WriteLine("******************C# Enummmm Under Namespace**********************************");
             WeekDays d = WeekDays.Tuesday;
             Console.WriteLine(d);
+
+            Console.WriteLine("******************END OF THE PROGRAM**********************************");
         }
     }
 }
