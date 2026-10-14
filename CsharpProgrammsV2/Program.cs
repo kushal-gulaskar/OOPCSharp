@@ -394,15 +394,15 @@ class Program
 {
     static void Main()
     {
-        int[] array1 = { 1, 1, 1, 1 };
-        int[] array2 = { 7, 8, 9, 10 };
-        int[] array3 = { 5, 6, 5, 7, 6 };
-        int[] array4 = { 5, 6, 5, 9, 6, 8 };
+        int[] array1 = { 1, 1, 1, 1 }; //op - All integers are duplicate
+        int[] array2 = { 7, 8, 9, 10 }; //op - 7
+        int[] array3 = { 5, 6, 5, 7, 6 ,8}; //op - 7
+        int[] array4 = { 5, 6, 5, 9, 6, 8 }; //op - 9
 
-        string result1 = FindFirstUnique(array1);
-        string result2 = FindFirstUnique(array2);
-        string result3 = FindFirstUnique(array3);
-        string result4 = FindFirstUnique(array4);
+        string result1 = FindUnique(array1);
+        string result2 = FindUnique(array2);
+        string result3 = FindUnique(array3);
+        string result4 = FindUnique(array4);
 
         Console.WriteLine(result1);
         Console.WriteLine(result2);
@@ -410,7 +410,7 @@ class Program
         Console.WriteLine(result4);
     }
 
-    static string FindFirstUnique(int[] numbers)
+    static string FindUnique(int[] numbers)
     {
         for (int i = 0; i < numbers.Length; i++)
         {
@@ -426,10 +426,11 @@ class Program
 
             if (count == 1)
             {
+                //Console.WriteLine(numbers[i]);
+                //toPrint ALL Uniq Nums use "Console.WriteLine(numbers[i]);"
                 return numbers[i].ToString();
             }
         }
-
         return "All integers are duplicate";
     }
 }
