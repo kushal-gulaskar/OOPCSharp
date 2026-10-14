@@ -248,6 +248,19 @@
 //}
 ////OP - 54321
 
+////9.Reverse Given Numbers LINQ
+//class ReverseNumberLinq
+//{
+//    static void Main()
+//    {
+//        int num = 12345;
+//        int reversed = int.Parse(
+//            new string(num.ToString().Reverse().ToArray()));
+//        Console.WriteLine(reversed);
+//    }
+//}
+////OP - 54321
+
 ////9.Print Pyramid
 //class Pyramid
 //{
@@ -318,14 +331,105 @@
 ////ab
 ////abc
 
-//12.Pyramid pattern Name
-class PyramidOfName
+//12.Find no of occurrences of Caracter in this string
+//class Program
+//{
+//    static void Main()
+//    {
+//        string Name = "new name".ToLower();
+
+//        for (int i = 0; i < Name.Length; i++)
+//        {
+//            char ch = Name[i];
+
+//            if (ch == ' ')
+//                continue;
+
+//            int count = 0;
+
+//            foreach (char c in Name)
+//            {
+//                if (ch == c)
+//                {
+//                    count++;
+//                }
+//            }
+//            Console.WriteLine(ch + " = " + count);
+//        }
+//    }
+//}
+//OP -
+//n = 2
+//e = 2
+//w = 1
+//n = 2
+//a = 1
+//m = 1
+//e = 2
+
+
+//13.
+//Scenario 1:
+//{ 1, 1, 1, 1 }
+//→ All numbers are duplicate
+//→ "All integers are duplicate"
+
+//Scenario 2:
+//{ 7, 8, 9, 10 }
+//→ Every number is unique
+//→ Return first number = 7
+
+//Scenario 3:
+//{ 5, 6, 5, 7, 6 }
+//→ Only one unique number
+//→ Return 7
+
+//Scenario 4:
+//{ 5, 6, 5, 9, 6, 8 }
+//→ More than one unique number: 9 and 8
+//→ Return first unique number = 9
+using System;
+
+class Program
 {
     static void Main()
     {
-        int num = 12345;
-        int reversed = int.Parse(
-            new string(num.ToString().Reverse().ToArray()));
-        Console.WriteLine(reversed);
+        int[] array1 = { 1, 1, 1, 1 };
+        int[] array2 = { 7, 8, 9, 10 };
+        int[] array3 = { 5, 6, 5, 7, 6 };
+        int[] array4 = { 5, 6, 5, 9, 6, 8 };
+
+        string result1 = FindFirstUnique(array1);
+        string result2 = FindFirstUnique(array2);
+        string result3 = FindFirstUnique(array3);
+        string result4 = FindFirstUnique(array4);
+
+        Console.WriteLine(result1);
+        Console.WriteLine(result2);
+        Console.WriteLine(result3);
+        Console.WriteLine(result4);
+    }
+
+    static string FindFirstUnique(int[] numbers)
+    {
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            int count = 0;
+
+            for (int j = 0; j < numbers.Length; j++)
+            {
+                if (numbers[i] == numbers[j])
+                {
+                    count++;
+                }
+            }
+
+            if (count == 1)
+            {
+                return numbers[i].ToString();
+            }
+        }
+
+        return "All integers are duplicate";
     }
 }
