@@ -368,7 +368,7 @@
 //e = 2
 
 
-//13.
+//13. Find first unique number from given array else return "All integers are duplicate"
 //Scenario 1:
 //{ 1, 1, 1, 1 }
 //→ All numbers are duplicate
@@ -388,49 +388,78 @@
 //{ 5, 6, 5, 9, 6, 8 }
 //→ More than one unique number: 9 and 8
 //→ Return first unique number = 9
-using System;
+//using System;
+//class Program
+//{
+//    static void Main()
+//    {
+//        int[] array1 = { 1, 1, 1, 1 }; //op - All integers are duplicate
+//        int[] array2 = { 7, 8, 9, 10 }; //op - 7
+//        int[] array3 = { 5, 6, 5, 7, 6 ,8}; //op - 7
+//        int[] array4 = { 5, 6, 5, 9, 6, 8 }; //op - 9
 
+//        string result1 = FindUnique(array1);
+//        string result2 = FindUnique(array2);
+//        string result3 = FindUnique(array3);
+//        string result4 = FindUnique(array4);
+
+//        Console.WriteLine(result1);
+//        Console.WriteLine(result2);
+//        Console.WriteLine(result3);
+//        Console.WriteLine(result4);
+//    }
+
+//    static string FindUnique(int[] numbers)
+//    {
+//        for (int i = 0; i < numbers.Length; i++)
+//        {
+//            int count = 0;
+
+//            for (int j = 0; j < numbers.Length; j++)
+//            {
+//                if (numbers[i] == numbers[j])
+//                {
+//                    count++;
+//                }
+//            }
+
+//            if (count == 1)
+//            {
+//                //Console.WriteLine(numbers[i]);
+//                //toPrint ALL Uniq Nums use "Console.WriteLine(numbers[i]);"
+//                return numbers[i].ToString();
+//            }
+//        }
+//        return "All integers are duplicate";
+//    }
+//}
+
+
+//14. Find the longest substring without repeating characters
+using System;
 class Program
 {
     static void Main()
     {
-        int[] array1 = { 1, 1, 1, 1 }; //op - All integers are duplicate
-        int[] array2 = { 7, 8, 9, 10 }; //op - 7
-        int[] array3 = { 5, 6, 5, 7, 6 ,8}; //op - 7
-        int[] array4 = { 5, 6, 5, 9, 6, 8 }; //op - 9
-
-        string result1 = FindUnique(array1);
-        string result2 = FindUnique(array2);
-        string result3 = FindUnique(array3);
-        string result4 = FindUnique(array4);
-
-        Console.WriteLine(result1);
-        Console.WriteLine(result2);
-        Console.WriteLine(result3);
-        Console.WriteLine(result4);
-    }
-
-    static string FindUnique(int[] numbers)
-    {
-        for (int i = 0; i < numbers.Length; i++)
+        string text = "abcabcbbxyzu";
+        string longest = "";
+        for (int i = 0; i < text.Length; i++) // Start from each character in the string
         {
-            int count = 0;
-
-            for (int j = 0; j < numbers.Length; j++)
+            string current = "";
+            for (int j = i; j < text.Length; j++) // Start from the current character and go to the end of the string
             {
-                if (numbers[i] == numbers[j])
+                if (current.Contains(text[j])) //Duplicate found?
                 {
-                    count++;
+                    break;                   // Break the inner loop if duplicate found
+                }
+                current = current + text[j]; // Append the current character to the current substring
+                if (current.Length > longest.Length) 
+                {
+                    longest = current;
                 }
             }
-
-            if (count == 1)
-            {
-                //Console.WriteLine(numbers[i]);
-                //toPrint ALL Uniq Nums use "Console.WriteLine(numbers[i]);"
-                return numbers[i].ToString();
-            }
         }
-        return "All integers are duplicate";
+        Console.WriteLine(longest);
     }
 }
+//OP - bxyzu
