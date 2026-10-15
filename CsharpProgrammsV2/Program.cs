@@ -441,25 +441,35 @@ class Program
 {
     static void Main()
     {
-        string text = "abcabcbbxyzu";
+        string input = "abcdabcdefgh";
+        string longest = FindLongestSubstring(input);
+
+        Console.WriteLine($"Longest substring without repetition: {longest}");
+    }
+
+    static string FindLongestSubstring(string input)
+    {
         string longest = "";
-        for (int i = 0; i < text.Length; i++) // Start from each character in the string
+
+        for (int i = 0; i < input.Length; i++)
         {
             string current = "";
-            for (int j = i; j < text.Length; j++) // Start from the current character and go to the end of the string
+
+            for (int j = i; j < input.Length; j++)
             {
-                if (current.Contains(text[j])) //Duplicate found?
+                if (current.Contains(input[j]))
                 {
-                    break;                   // Break the inner loop if duplicate found
+                    break;
                 }
-                current = current + text[j]; // Append the current character to the current substring
-                if (current.Length > longest.Length) 
+                current = current + input[j];
+                if (current.Length > longest.Length)
                 {
                     longest = current;
                 }
             }
         }
-        Console.WriteLine(longest);
+
+        return longest;
     }
 }
-//OP - bxyzu
+// Output: Longest substring without repetition: abcd
